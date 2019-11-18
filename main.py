@@ -3,13 +3,12 @@ import random
 
 # Change the image when this function is called when the button is pressed
 def changeImage():
-    # We are grabbing a random imageArray to the imageSet variable
-    imageArray = ["cat1.png", "spaceGuy.png", "squirrel-coffee.png", "vigo.png"]
+    # We are grabbing a random imageListArray to the imageSet variable
+    imageListArray = ["cat1.png", "spaceGuy.png", "squirrel-coffee.png", "vigo.png"]
     randomNumber = random.randint(0, 3)
 
     # Get the random number equal to the array here
-    imageSet = tkinter.PhotoImage(file=imageArray[randomNumber])
-    imageLabel.config(image=imageSet)
+    imageLabel.config(image=imageListArray[randomNumber])
 
 
 # Make a new root window here
@@ -20,8 +19,8 @@ root.columnconfigure(1, minsize=200)
 
 
 # Make a static label for the images to change here
-imageLabel = tkinter.Label(root, text="images", image="cat1.png")
-imageLabel.grid(row=10, rowspan=3, column=1)
+imageLabel = tkinter.Label(root, text="images", img)
+imageLabel.grid(row=10, rowspan=3, column=3)
 
 
 # Now make a button to change the image
